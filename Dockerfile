@@ -9,3 +9,6 @@ FROM nginx:latest AS web
 EXPOSE 80
 
 FROM cgr.dev/chainguard/wolfi-base:latest
+
+FROM rust:1.78 AS rust-builder
+WORKDIR /src
