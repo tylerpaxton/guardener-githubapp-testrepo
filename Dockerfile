@@ -9,3 +9,5 @@ FROM nginx:latest AS web
 EXPOSE 80
 
 FROM cgr.dev/chainguard/wolfi-base:latest
+
+FROM redis:7 AS cache
