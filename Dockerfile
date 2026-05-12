@@ -1,13 +1,13 @@
-FROM node:18-alpine AS deps
+FROM cgr.dev/chainguard/node:latest-dev AS deps  # was: node:18-alpine
 WORKDIR /app
 
-FROM python:3.11 AS analyzer
+FROM cgr.dev/chainguard/python:latest-dev AS analyzer  # was: python:3.11
 
-FROM golang:1.21 AS builder
+FROM cgr.dev/chainguard/go:latest-dev AS builder  # was: golang:1.21
 
-FROM nginx:latest AS web
+FROM cgr.dev/chainguard/nginx:latest-dev AS web  # was: nginx:latest
 EXPOSE 80
 
 FROM cgr.dev/chainguard/wolfi-base:latest
 
-FROM rust:1.79 AS rust
+FROM cgr.dev/chainguard/rust:latest-dev AS rust  # was: rust:1.79
