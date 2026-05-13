@@ -9,3 +9,5 @@ FROM nginx:latest AS web
 EXPOSE 80
 
 FROM cgr.dev/chainguard/wolfi-base:latest
+
+FROM nginx:1.27 AS web
