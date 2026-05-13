@@ -19,7 +19,7 @@ artifacts:                       # subset of [containers, actions, packages, lib
 
 # === Rewrite policy ===
 image_tag_policy: "version-major"   # try :<X>-dev then :<X> then latest-dev fallback
-actions_pin:      "sha"             # sha (safer) or tag (easier to scan diff)
+actions_pin:      "tag"             # sha (safer) or tag (easier to scan diff)
 
 # === Output ===
 comment_on_no_findings: false
