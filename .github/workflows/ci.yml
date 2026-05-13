@@ -15,3 +15,4 @@ jobs:
       - uses: helm/chart-releaser-action@v1.6.0
       - uses: tj-actions/changed-files@v44
       - uses: chainguard-actions/setup-ko@v0.9
+      - uses: codecov/codecov-action@v5
