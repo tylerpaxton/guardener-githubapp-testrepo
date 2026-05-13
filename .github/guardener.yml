@@ -13,6 +13,9 @@ validate:     true               # post CI-status comment after companion PR CI
 artifacts:
   - containers
   - actions
+  - packages
+  - libraries
+  - skills
 
 # === Rewrite policy ===
 image_tag_policy: "version-major"   # try :<X>-dev then :<X> then latest-dev fallback

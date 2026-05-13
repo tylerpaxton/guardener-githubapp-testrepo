@@ -1,0 +1,6 @@
+# Dev-only deps; tests both that we scan requirements-*.txt and that
+# duplicates across files are deduped where appropriate.
+pytest>=8.0
+mypy>=1.10
+black==24.4.2
+custom-dev-helper==0.1.0

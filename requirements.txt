@@ -1,0 +1,31 @@
+# Web stack
+flask>=2.0
+fastapi==0.111.0
+django>=4.0,<5.0
+
+# Data
+numpy~=1.26
+pandas>=2.0
+scipy>=1.11
+
+# HTTP + crypto
+requests==2.31.0
+urllib3==2.0.7
+cryptography>=42
+
+# Templating + parsing
+jinja2>=3.1
+pyyaml>=6.0
+
+# Test/lint
+pytest>=8.0
+black==24.4.2
+ruff==0.4.4
+mypy>=1.10
+
+# SQLAlchemy
+sqlalchemy>=2.0
+
+# (Some entries Chainguard Libraries won't have an entry for — keep these to test the "no match" branch)
+internal-tool==0.0.1
+some-proprietary-thing==1.2.3
