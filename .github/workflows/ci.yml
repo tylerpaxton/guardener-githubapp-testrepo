@@ -5,13 +5,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: chainguard-actions/checkout@9b87fa7a44e87f40889e307b75721fe0067c5eb9  # was @v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - uses: codecov/codecov-action@v4
-      - uses: sigstore/cosign-installer@v3.5.0
-      - uses: psf/black@stable
-      - uses: helm/chart-releaser-action@v1.6.0
+      - uses: chainguard-actions/codecov-action@b89b5eb1e9fdcfe150d318e402b110a1e03ee18d  # was @v4
+      - uses: chainguard-actions/cosign-installer@ec5ac0338a20f46431b7b8dba244feb8070e68a1  # was @v3.5.0
+      - uses: chainguard-actions/black@3b46e5f7bab3e54bd24580de4167ea5da6503c5d  # was @stable
+      - uses: chainguard-actions/chart-releaser-action@1df08275fe605e82de3b45b57bf872b84bcb9357  # was @v1.6.0
       - uses: tj-actions/changed-files@v44
       - uses: chainguard-actions/setup-ko@v0.9
