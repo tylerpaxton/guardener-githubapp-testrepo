@@ -1,0 +1,4 @@
+# Guardener per-repo config — see https://github.com/tylerpaxton/guardener-poc
+schedule: "0 * * * *"   # hourly at :00 — easy to verify each global tick
+timezone: "UTC"
+enabled: true
