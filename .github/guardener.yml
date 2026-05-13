@@ -1,4 +1,26 @@
-# Guardener per-repo config — see https://github.com/tylerpaxton/guardener-poc
-schedule: "0 * * * *"   # hourly at :00 — easy to verify each global tick
-timezone: "UTC"
-enabled: true
+# Guardener per-repo config — all knobs documented inline.
+# Schema: https://github.com/tylerpaxton/guardener-poc/blob/main/lib/repo-config.js
+
+# === Trigger control ===
+enabled:      true
+schedule:     "0 * * * *"        # hourly at :00 — useful for POC testing
+timezone:     "UTC"
+on_pr:        true               # react to PR events
+auto_rewrite: true               # open companion/maintenance rewrite PRs
+validate:     true               # post CI-status comment after companion PR CI
+
+# === Scope ===
+artifacts:                       # subset of [containers, actions, packages, libraries, skills]
+  - containers
+  - actions
+  - packages
+  - libraries
+  - skills
+
+# === Rewrite policy ===
+image_tag_policy: "version-major"   # try :<X>-dev then :<X> then latest-dev fallback
+actions_pin:      "sha"             # sha (safer) or tag (easier to scan diff)
+
+# === Output ===
+comment_on_no_findings: false
+digest_issue_title:     "Guardener maintenance digest"
