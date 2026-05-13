@@ -10,12 +10,9 @@ auto_rewrite: true               # open companion/maintenance rewrite PRs
 validate:     true               # post CI-status comment after companion PR CI
 
 # === Scope ===
-artifacts:                       # subset of [containers, actions, packages, libraries, skills]
+artifacts:
   - containers
   - actions
-  - packages
-  - libraries
-  - skills
 
 # === Rewrite policy ===
 image_tag_policy: "version-major"   # try :<X>-dev then :<X> then latest-dev fallback
